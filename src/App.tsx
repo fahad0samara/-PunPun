@@ -3,6 +3,7 @@ import ReactDOM from "react-dom";
 import {BrowserRouter} from "react-router-dom";
 import {Routes, Route} from "react-router-dom";
 import Home from "./views/Home";
+import "./index.css";
 
 function App() {
   const [count, setCount] = useState(0);
