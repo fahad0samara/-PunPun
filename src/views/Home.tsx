@@ -14,11 +14,12 @@ const Home = (_props: any) => {
       <div className="home-hero">
         <div className="home-container01">
           <div className="home-card">
-            <h1 className="home-text HeadingOne">Soft Design System.</h1>
+            <h1 className="home-text HeadingOne">PunPun</h1>
             <h1 className="home-text01 HeadingOne">Choose the best</h1>
             <span className="home-text02 Lead">
               <span>
-                Find the story of Creative Tim&apos;s most complex design
+                Find the story of Creative Tim&apos;s most complex
+                designdsfsdfsd
                 <span
                   dangerouslySetInnerHTML={{
                     __html: " ",
