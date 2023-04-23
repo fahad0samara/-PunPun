@@ -9,8 +9,18 @@ function Navigation() {
 
   return (
     <nav className=" w-full">
-      <div className="fixed z-10 left-1 right-1 md:right-20 md:left-20 mx-auto max-w-7xl px-5 flex items-center justify-between">
-        <nav className="flex items-center justify-between w-full h-16 bg-white shadow-lg rounded-full">
+      <div className="fixed z-10 left-1 right-1 mt-5 md:mx-11  max-w-7xl px-5 flex items-center justify-between">
+        <nav
+          style={{
+            transition: "all 0.5s ease",
+            boxShadow:
+              "0 .25rem .375rem -.0625rem hsla(0, 0%, 8%, .12), 0 .125rem .25rem -.0625rem hsla(0, 0%, 8%, .07)",
+            backgroundColor: "hsla(0, 0%, 100%, .8)",
+          }}
+          className="flex 
+        shadow-md 
+        items-center justify-between w-full h-16  rounded-full"
+        >
           <div className="relative flex items-center justify-between h-16">
             <div className="flex">
               <Link to="/" className="flex-shrink-0 flex items-center">
@@ -32,7 +42,7 @@ function Navigation() {
            left-5
           bottom-0
        
-             items-center sm:hidden   "
+             items-center md:hidden   "
             >
               <button
                 type="button"
@@ -50,8 +60,8 @@ function Navigation() {
                 )}
               </button>
             </div>
-            <div className="flex-1 flex  bg-teal-400 items-center justify-center sm:items-stretch sm:justify-start">
-              <div className="hidden sm:block sm:ml-6">
+            <div className="flex-1 flex   items-center justify-center sm:items-stretch ">
+              <div className="hidden sm:ml-6 md:flex sm:justify-between ">
                 <div className="flex space-x-4">
                   <Link
                     to="/"
@@ -75,23 +85,35 @@ function Navigation() {
               </div>
             </div>
           </div>
+          <div className="hidden md:block mr-5">
+            <Link
+              to="/"
+              className="relative inline-flex items-center justify-center p-2 px-5 py-2/5 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
+            >
+              <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+              <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+              <span className="relative text-white">BUY Now</span>
+            </Link>
+          </div>
         </nav>
       </div>
 
       <div
         className={`${
           isOpen
-            ? `block   w-80  bg-white    transition-all    duration-300ease-in-out
+            ? `block   w-80  bg-white sm:mt-8
+          mt-16
+             h-auto    transition-all    duration-300ease-in-out
         transform
         translate-x-0
         opacity-100
         scale-100`
             : "hidden"
-        } sm:hidden absolute z-20 top-16 left-3  rounded-b-lg shadow-lg`}
+        } md:hidden absolute z-20 top-16 left-3  rounded-b-lg shadow-lg`}
       >
         <div
-          className="shadow-md
-        space-y-3
+          className="
+        space-y-2
          rounded-lg divide-y divide-gray-200 flex flex-col justify-center items-center"
         >
           <Link
@@ -116,24 +138,17 @@ function Navigation() {
             Contact
           </Link>
 
-          <hr className="mt-4 w-full lg:hidden" />
-          <div className="my-4 flex items-center space-x-6 space-y-2 lg:my-0 lg:ml-auto lg:space-x-8 lg:space-y-0">
-            <a
-              href="#"
-              title=""
-              className="whitespace-nowrap rounded font-medium transition-all duration-200 focus:outline-none focus:ring-1 focus:ring-blue-700 focus:ring-offset-2 hover:text-opacity-50"
-            >
-              {" "}
-              Log in{" "}
-            </a>
-            <a
-              href="#"
-              title=""
-              className="whitespace-nowrap rounded-xl bg-blue-700 px-5 py-3 font-medium text-white transition-all duration-200 focus:outline-none focus:ring-2 focus:ring-blue-700 focus:ring-offset-2 hover:bg-blue-600"
-            >
-              Get free trial
-            </a>
-          </div>
+          <hr className="mt-4 w-full " />
+
+          <Link
+            to="/"
+            className="mt-2 relative inline-flex items-center justify-center p-2 px-4 py-1 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
+          >
+            <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
+            <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
+            <span className="relative text-white">BUY Now</span>
+          </Link>
+          <hr className="mt-4 w-full " />
         </div>
       </div>
     </nav>

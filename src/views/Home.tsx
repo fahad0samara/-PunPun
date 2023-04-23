@@ -6,6 +6,7 @@ import Footer from "../components/Footer";
 import ListItem from "../components/ListItem";
 import FeatureCard from "../components/FeatureCard";
 import Header from "../components/header";
+import Scrolling from "../Helper/Scrolling";
 
 const Home = (_props: any) => {
   return (
@@ -13,50 +14,46 @@ const Home = (_props: any) => {
       <Header />
       <div className="home-hero">
         <div className="home-container01">
-          <div className="home-card">
-            <h1 className="home-text HeadingOne">PunPun</h1>
-            <h1 className="home-text01 HeadingOne">Choose the best</h1>
-            <span className="home-text02 Lead">
-              <span>
-                Find the story of Creative Tim&apos;s most complex
-                designdsfsdfsd
-                <span
-                  dangerouslySetInnerHTML={{
-                    __html: " ",
-                  }}
-                />
-              </span>
-              <span>
-                system and all the work that make this design available.
-              </span>
-            </span>
-            {/* <div className="home-container02">
-              <div className="home-container03">
-                <PrimaryPinkButton button="contact us"></PrimaryPinkButton>
+          <div className="relative mt-12">
+            <div
+              style={{
+                transition: "all 0.5s ease",
+              }}
+              className="
+          ml-12
+          shadow-black
+          shadow-xl
+
+        
+          
+
+                rounded-2xl  p-12 mt-6 flex flex-col items-center space-y-6"
+            >
+              <h1 className="card-text text-5xl font-bold leading-tight bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+                Soft Design System.
+              </h1>
+              <h1 className="card-text1 text-2xl font-bold text-gray-700 text-center mb-6">
+                Choose the best
+              </h1>
+              <div className="card-text2 text-lg text-gray-600 mb-6">
+                <p>Find the story of Creative Tim's most complex design</p>
+                <p>system and all the work that make this design available.</p>
               </div>
-              <OutlineGrayButton button="read more"></OutlineGrayButton>
-            </div> */}
-            <div className="home-container04">
-              <img
-                alt="image"
-                src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/logos/gray-logos/logo-pinterest.svg"
-                className="home-image"
-              />
-              <img
-                alt="image"
-                src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/logos/gray-logos/logo-netflix.svg"
-                className="home-image01"
-              />
-              <img
-                alt="image"
-                src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/logos/gray-logos/logo-coinbase.svg"
-                className="home-image02"
-              />
-              <img
-                alt="image"
-                src="https://demos.creative-tim.com/soft-ui-design-system-pro/assets/img/logos/gray-logos/logo-nasa.svg"
-                className="home-image03"
-              />
+              <div className="card-container flex justify-between items-center">
+                <div className="card-container1 mr-4">
+                  <div className="primary-pink-button-container">
+                    <button className="primary-pink-button-button bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 px-8 rounded-full hover:scale-105 transition duration-150 ease-in-out">
+                      contact us
+                    </button>
+                  </div>
+                </div>
+                <div className="outline-gray-button-container">
+                  <button className="outline-gray-button-button text-gray-200 border-gray-200 border py-3 px-8 rounded-full hover:scale-105 transition duration-150 ease-in-out">
+                    read more
+                  </button>
+                </div>
+              </div>
+              <Scrolling />
             </div>
           </div>
         </div>
