@@ -6,10 +6,7 @@
     overflow: hidden;
 }
 
-.card-container2 {
-    display: flex;
-    flex-wrap: nowrap;
-}
+
 
 .card-image {
     margin-right: 20px;
@@ -17,4 +14,14 @@
 
 .card-image:last-of-type {
     margin-right: 0;
+}
+.card-container2 {
+    flex: 0 0 auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: var(--dl-space-space-halfunit);
+    align-items: flex-start;
+    flex-direction: row;
+    justify-content: center;
 }
