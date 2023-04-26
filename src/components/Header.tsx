@@ -72,12 +72,12 @@ function Navigation() {
                     Home
                   </Link>
                   <Link
-                    to="/about"
+                    to="/Shop"
                     className="
                     leading-tight font-bold bg-gradient-to-r from-purple-600 to-pink-500 text-white text-transparent hover:bg-gradient-to-bl hover:text-xs
                       px-3 py-2 rounded-md text-sm"
                   >
-                    About
+                    Shop
                   </Link>
                   <Link
                     to="/contact"

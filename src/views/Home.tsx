@@ -14,14 +14,14 @@ const Home = (_props: any) => {
       <Header />
       <div className="home-hero">
         <div className="home-container01">
-          <div className="relative mt-12">
+          <div className="relative mt-20 -ml-7">
             <div
               className="ml-12 shadow-black shadow-xl rounded-2xl p-12 mt-6 flex flex-col items-center space-y-6"
               style={{
                 transition: "all 0.5s ease",
               }}
             >
-              <h1 className="card-text text-5xl font-bold leading-tight bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
+              <h1 className=" text-5xl font-bold leading-tight bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
                 Welcome to Our Store
               </h1>
               <h2 className="card-text1 text-2xl font-bold text-gray-700 text-center mb-6">
@@ -45,7 +45,7 @@ const Home = (_props: any) => {
                   </div>
                 </div>
                 <div className="outline-gray-button-container">
-                  <button className="outline-gray-button-button text-gray-200 border-gray-200 border py-3 px-8 rounded-full hover:scale-105 transition duration-150 ease-in-out">
+                  <button className="bg-gradient-to-r border-violet-500 from-purple-600 to-pink-500 bg-clip-text text-transparent   border py-3 px-8 rounded-full hover:scale-105 transition duration-150 ease-in-out">
                     Learn More
                   </button>
                 </div>
