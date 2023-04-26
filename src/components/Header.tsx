@@ -65,19 +65,25 @@ function Navigation() {
                 <div className="flex space-x-4">
                   <Link
                     to="/"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="
+                    leading-tight font-bold bg-gradient-to-r from-purple-600 to-pink-500 text-white text-transparent hover:bg-gradient-to-bl hover:text-xs
+                      px-3 py-2 rounded-md text-sm"
                   >
                     Home
                   </Link>
                   <Link
                     to="/about"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="
+                    leading-tight font-bold bg-gradient-to-r from-purple-600 to-pink-500 text-white text-transparent hover:bg-gradient-to-bl hover:text-xs
+                      px-3 py-2 rounded-md text-sm"
                   >
                     About
                   </Link>
                   <Link
                     to="/contact"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-sm font-medium"
+                    className="
+                    leading-tight font-bold bg-gradient-to-r from-purple-600 to-pink-500 text-white text-transparent hover:bg-gradient-to-bl hover:text-xs
+                      px-3 py-2 rounded-md text-sm"
                   >
                     Contact
                   </Link>
@@ -88,11 +94,12 @@ function Navigation() {
           <div className="hidden md:block mr-5">
             <Link
               to="/"
-              className="relative inline-flex items-center justify-center p-2 px-5 py-2/5 overflow-hidden font-medium text-indigo-600 transition duration-300 ease-out rounded-full shadow-xl group hover:ring-1 hover:ring-purple-500"
+              className="
+                    leading-tight font-bold bg-gradient-to-r from-purple-600 to-pink-500 text-white text-transparent hover:bg-gradient-to-bl hover:text-xs
+                    rounded-full
+                      px-3 py-2  text-sm"
             >
-              <span className="absolute inset-0 w-full h-full bg-gradient-to-br from-blue-600 via-purple-600 to-pink-700"></span>
-              <span className="absolute bottom-0 right-0 block w-64 h-64 mb-32 mr-4 transition duration-500 origin-bottom-left transform rotate-45 translate-x-24 bg-pink-500 rounded-full opacity-30 group-hover:rotate-90 ease"></span>
-              <span className="relative text-white">BUY Now</span>
+              BUY Now
             </Link>
           </div>
         </nav>
@@ -118,11 +125,12 @@ function Navigation() {
         >
           <Link
             to="/"
-            className="flex items-center text-gray-900 hover:bg-gray-100 hover:text-gray-900 block px-4 py-2 text-base font-medium"
+            className="px-4 py-2 text-base font-medium leading-tight bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent"
           >
-            <FaHome className="mr-2" />
+            <FaHome className="mr-2 " />
             Home
           </Link>
+
           <Link
             to="/about"
             className="flex items-center text-gray-900 hover:bg-gray-100 hover:text-gray-900 block px-4 py-2 text-base font-medium"

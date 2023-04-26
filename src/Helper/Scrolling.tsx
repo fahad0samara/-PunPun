@@ -53,56 +53,81 @@ import bigcommerce from "../assets/bigcommerce.svg";
 import commerzbank from "../assets/commerzbank.svg";
 import precommit from "../assets/precommit.svg";
 import woocommerce from "../assets/woocommerce.svg";
+import homeassistantcommunitystore from "../assets/homeassistantcommunitystore.svg";
+import lenovo from "../assets/lenovo.svg";
+import bitcoincash from "../assets/bitcoincash.svg";
+import conventionalcommits from "../assets/conventionalcommits.svg";
 
 const images = [
-  bigcommerce,
-  commerzbank,
-  precommit,
-  woocommerce,
-  bigcommerce,
-  commerzbank,
-  precommit,
-  woocommerce,
-  bigcommerce,
-  commerzbank,
-  precommit,
-  woocommerce,
-  bigcommerce,
-  commerzbank,
-  precommit,
-  woocommerce,
+  {
+    src: bigcommerce,
+    alt: "Bigcommerce",
+  },
+  {
+    src: commerzbank,
+    alt: "Commerzbank",
+  },
+  {
+    src: precommit,
+    alt: "Precommit",
+  },
+  {
+    src: woocommerce,
+    alt: "WooCommerce",
+  },
+  {
+    src: homeassistantcommunitystore,
+    alt: "Home Assistant Community Store",
+  },
+  {
+    src: lenovo,
+    alt: "Lenovo",
+  },
+  {
+    src: bitcoincash,
+    alt: "Bitcoin Cash",
+  },
+  {
+    src: conventionalcommits,
+    alt: "Conventional Commits",
+  },
 ];
 
 export default function Scrolling() {
-  const [scrollX, setScrollX] = useState(0);
+  const [scrollX, setScrollX] = useState(-images.length * 60);
   const containerRef = useRef(null);
 
   useEffect(() => {
-    const intervalRef = setInterval(() => {
-      setScrollX(scrollX => scrollX - 60);
-    }, 2000); // adjust this value to change the interval between image transitions
+    if (containerRef.current) {
+      const containerWidth = containerRef.current.getBoundingClientRect().width;
 
-    return () => clearInterval(intervalRef);
+      let interval = setInterval(() => {
+        setScrollX(scrollX => scrollX + 1);
+      }, 50);
+
+      return () => clearInterval(interval);
+    }
   }, []);
 
   useEffect(() => {
     if (containerRef.current) {
       const containerWidth = containerRef.current.getBoundingClientRect().width;
-      if (scrollX < -containerWidth) {
-        setScrollX(0);
+
+      if (scrollX > 0) {
+        setScrollX(-images.length * 60);
       }
     }
   }, [scrollX]);
 
   return (
-    <div className="w-full h-12 overflow-hidden relative" ref={containerRef}>
-      {images.map((imageUrl, index) => (
+    <div className="w-96 h-12 overflow-hidden relative" ref={containerRef}>
+      {images.map((image, index) => (
         <img
           key={index}
-          src={imageUrl}
-          alt={`Image ${index + 1}`}
+          src={image.src}
+          alt={image.alt}
           className="h-9 w-9 object-contain absolute top-0 left-0 transition-all duration-2000 ease-out"
-          style={{transform: `translateX(${scrollX + index * 60}px)`}}
+          style={{transform: `translateX(${scrollX + index * 80}px)`}}
         />
       ))}
     </div>

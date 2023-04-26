@@ -109,14 +109,14 @@
 }
 
 .home-image04 {
-  top: 55px;
-  right: 44px;
+  top: 70px;
+    right: 50px;
   width: 50%;
   height: 80vh;
   position: absolute;
   object-fit: cover;
   object-position: right;
-  border-bottom-left-radius: 10rem;
+  border-bottom-left-radius: 14rem;
 }
 
 .home-features {

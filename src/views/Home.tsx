@@ -16,40 +16,37 @@ const Home = (_props: any) => {
         <div className="home-container01">
           <div className="relative mt-12">
             <div
+              className="ml-12 shadow-black shadow-xl rounded-2xl p-12 mt-6 flex flex-col items-center space-y-6"
               style={{
                 transition: "all 0.5s ease",
               }}
-              className="
-          ml-12
-          shadow-black
-          shadow-xl
-
-        
-          
-
-                rounded-2xl  p-12 mt-6 flex flex-col items-center space-y-6"
             >
               <h1 className="card-text text-5xl font-bold leading-tight bg-gradient-to-r from-purple-600 to-pink-500 bg-clip-text text-transparent">
-                Soft Design System.
+                Welcome to Our Store
               </h1>
-              <h1 className="card-text1 text-2xl font-bold text-gray-700 text-center mb-6">
-                Choose the best
-              </h1>
+              <h2 className="card-text1 text-2xl font-bold text-gray-700 text-center mb-6">
+                Get the Best Deals Here
+              </h2>
               <div className="card-text2 text-lg text-gray-600 mb-6">
-                <p>Find the story of Creative Tim's most complex design</p>
-                <p>system and all the work that make this design available.</p>
+                <p>
+                  Discover our wide selection of products at unbeatable prices.
+                </p>
+                <p>
+                  Find everything you need for your home, office, or personal
+                  use.
+                </p>
               </div>
               <div className="card-container flex justify-between items-center">
                 <div className="card-container1 mr-4">
                   <div className="primary-pink-button-container">
                     <button className="primary-pink-button-button bg-gradient-to-r from-purple-600 to-pink-500 text-white py-3 px-8 rounded-full hover:scale-105 transition duration-150 ease-in-out">
-                      contact us
+                      Shop Now
                     </button>
                   </div>
                 </div>
                 <div className="outline-gray-button-container">
                   <button className="outline-gray-button-button text-gray-200 border-gray-200 border py-3 px-8 rounded-full hover:scale-105 transition duration-150 ease-in-out">
-                    read more
+                    Learn More
                   </button>
                 </div>
               </div>
@@ -63,24 +60,7 @@ const Home = (_props: any) => {
         src="https://images.unsplash.com/photo-1515343480029-43cdfe6b6aae?ixid=Mnw5MTMyMXwwfDF8c2VhcmNofDI2fHxsYXB0b3B8ZW58MHx8fHwxNjgxOTY1ODA4&amp;ixlib=rb-4.0.3&amp;h=1500"
         className="home-image04"
       />
-      <section className="home-features">
-        <FeatureCard
-          text="Choose the best design system for your next product."
-          title="Components"
-          image_src="/playground_assets/cube1.svg"
-        ></FeatureCard>
-        <FeatureCard image_src="/playground_assets/person1.svg"></FeatureCard>
-        <FeatureCard
-          text="Make your code easier to maintain using variables."
-          title="Less Code"
-          image_src="/playground_assets/rocket1.svg"
-        ></FeatureCard>
-        <FeatureCard
-          text="This design system is fully supported on any device."
-          title="Fully Responsive"
-          image_src="/playground_assets/credit%20card1.svg"
-        ></FeatureCard>
-      </section>
+      <FeatureCard />
       <section className="home-container05">
         <div className="home-container06">
           <h1 className="home-text05 HeadingOne">
