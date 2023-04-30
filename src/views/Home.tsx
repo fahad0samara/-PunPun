@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 
 import ListItem from "../components/ListItem";
 import FeatureCard from "../components/FeatureCard";
-import Header from "../components/header";
+import Header from "../components/Header";
 import Scrolling from "../Helper/Scrolling";
 
 const Home = (_props: any) => {
